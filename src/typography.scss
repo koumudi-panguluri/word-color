@@ -1,0 +1,52 @@
+@import '@angular/material/theming';
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:wght@400;600');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+// `headlines` and `body-1` levels.
+$vita-typography: mat-typography-config(
+  $font-family: 'Open Sans',
+  $display-4:     mat-typography-level(96px, 112px, 300, 'DM Sans'),
+  $display-3:     mat-typography-level(56px, 56px, 400, 'DM Sans'),
+  $display-2:     mat-typography-level(48px, 48px, 400, 'DM Sans'),
+  $display-1:     mat-typography-level(34px, 40px, 400, 'DM Sans'),
+  $headline:      mat-typography-level(24px, 32px, 400, 'DM Sans'),
+  $title:         mat-typography-level(20px, 32px, 500, 'DM Sans'),
+  $subheading-2:  mat-typography-level(16px, 28px, 700, 'DM Sans'),
+
+  $subheading-1:  mat-typography-level(15px, 24px, 400, 'Open Sans'),
+  $body-1:        mat-typography-level(14px, 20px, 400, 'Open Sans'),
+  $body-2:        mat-typography-level(14px, 24px, 600, 'Open Sans'),
+  $caption:       mat-typography-level(12px, 20px, 400, 'Open Sans'),
+  $button:        mat-typography-level(14px, 14px, 500, 'Open Sans'),
+    // Line-height must be unit-less fraction of the font-size.
+  $input:         mat-typography-level(inherit, 1.125, 400)
+);
+
+
+//// Override the typography in the core CSS.
+//@include mat-core($vita-typography);
+.mat-caption{
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.mat-title, .mat-headline, .mat-display-1, .mat-display-2,.mat-subheading-2, .mat-subheading-1{
+  margin: 0;
+}
+
+.mat-typography h4{
+  margin: 0;
+}
+
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}

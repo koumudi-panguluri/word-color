@@ -1,0 +1,14 @@
+<div fxLayout="column" fxLayoutGap="16px" fxLayoutAlign="center center" class="main-container">
+  <mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
+  <div class="mat-title">Word Color</div>
+  <mat-form-field class="full-width" appearance="outline">
+    <mat-label>Search for a word</mat-label>
+    <input matInput [formControl]="searchControl" placeholder="">
+    <span matSuffix>
+      <mat-icon>search</mat-icon>
+    </span>
+  </mat-form-field>
+  <div class="card-container" fxLayoutAlign="center center" *ngIf="selectedImage">
+    <img [src]="selectedImage" class="img-card">
+  </div>
+</div>

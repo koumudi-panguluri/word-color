@@ -3,8 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
-};
+  production: false,
+  searchAPI: {
+    url: "https://pixabay.com/api/?key=25596606-2721a825baa7fc3948129c099&q="
+  }
+}
 
 /*
  * For easier debugging in development mode, you can import the following file
