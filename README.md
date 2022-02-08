@@ -17,6 +17,8 @@ To get the image from the server, an open source API from pixabay.com has been u
 
 To get the dominant color from the image, a popular NPM library called fast-average-color module has been used. https://www.npmjs.com/package/fast-average-color
 
+The application uses Angular Material Forms, Angular flex-layouts for alignments and Rxjs library for handling observables.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
