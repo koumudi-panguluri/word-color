@@ -1,6 +1,6 @@
 <div fxLayout="column" fxLayoutGap="16px" fxLayoutAlign="center center" class="main-container">
   <mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
-  <div class="mat-title">Word Color</div>
+  <div class="mat-title">Word-Image Color</div>
   <mat-form-field class="full-width" appearance="outline">
     <mat-label>Search for a word</mat-label>
     <input matInput [formControl]="searchControl" placeholder="">
@@ -9,6 +9,15 @@
     </span>
   </mat-form-field>
   <div class="card-container" fxLayoutAlign="center center" *ngIf="selectedImage">
-    <img [src]="selectedImage" class="img-card">
+    <img [src]="selectedImage" class="img-card" id="image">
+  </div>
+  <div *ngIf="isNotFound" class="mat-subheading-2">Not found.</div>
+</div>
+<div fxLayout="row wrap" fxLayoutAlign="center center" *ngIf="colorList.length > 0">
+  <div class="grid" *ngFor="let item of colorList">
+    <div class="color-container mat-elevation-z1">
+      <div [style.background-color]="item.hex" [style.block-size]="item.size" style="border-radius: 4px;"></div>
+      <div class="text-align">{{item.hex}}</div>
+    </div>
   </div>
 </div>
